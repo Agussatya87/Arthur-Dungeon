@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - ground
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: object
     uniqueID: 3036876415
+    locked: 0
+  - name: Character
+    uniqueID: 3977324601
     locked: 0
   - name: Default
     uniqueID: 0
