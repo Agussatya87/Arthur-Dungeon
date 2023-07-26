@@ -7,8 +7,16 @@ public class PlayerCombat : MonoBehaviour
     public Animator animator;
 
     public Transform attackPoint;
-    public float attackRange = 0.5f;
     public LayerMask enemyLayers;
+
+
+    public float attackRange = 0.5f;
+    public int attackDamage = 40;
+
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +27,14 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Time.time >= nextAttackTime)
         {
-            attack();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+
         }
     }
 
@@ -33,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("We hit " + enemy.name);
+            enemy.GetComponent<Skeleton>().TakeDamage(attackDamage);
         }
         
     }

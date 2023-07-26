@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        if (IsGrounded () && !isJumping)
+        if (IsGrounded() && !isJumping)
         {
             anim.SetTrigger(jump_parameter);
             isJumping = true;
