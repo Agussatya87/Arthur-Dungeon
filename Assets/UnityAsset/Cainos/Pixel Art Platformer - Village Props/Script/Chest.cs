@@ -33,5 +33,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
         {
             IsOpened = false;
         }
+
+
     }
 }
