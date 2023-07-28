@@ -54212,8 +54212,8 @@ Canvas:
   m_GameObject: {fileID: 790752007}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 387729743}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -54222,7 +54222,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &790752011
 RectTransform:
@@ -54592,7 +54592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 925519971}
-  attackPoint: {fileID: 0}
+  attackPoint1: {fileID: 0}
+  attackPoint2: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
@@ -115360,7 +115361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3, y: -211.99998}
+  m_AnchoredPosition: {x: 3, y: -211.99997}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2007069968

@@ -6,7 +6,8 @@ public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
 
-    public Transform attackPoint;
+    public Transform attackPoint1;
+    public Transform attackPoint2;
     public LayerMask enemyLayers;
 
 
@@ -42,19 +43,30 @@ public class PlayerCombat : MonoBehaviour
     {
         animator.SetTrigger("attack"); 
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies1 = Physics2D.OverlapCircleAll(attackPoint1.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies2 = Physics2D.OverlapCircleAll(attackPoint2.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+
+        foreach (Collider2D enemy in hitEnemies1)
         {
             enemy.GetComponent<Skeleton>().TakeDamage(attackDamage);
         }
-        
+
+        foreach (Collider2D enemy in hitEnemies2)
+        {
+            enemy.GetComponent<Skeleton>().TakeDamage(attackDamage);
+        }
+
     }
 
     private void OnDrawGizmos()
     {
-        if (attackPoint == null)
+        if (attackPoint1 == null)
             return;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint1.position, attackRange);
+
+        if (attackPoint2 == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint2.position, attackRange);
     }
 }

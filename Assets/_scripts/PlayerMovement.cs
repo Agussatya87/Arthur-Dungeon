@@ -61,12 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            grounded = true;
-            jumpsRemaining = maxJumps;
-        }
-        else if (collision.gameObject.tag == "Rintangan")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Rintangan" || collision.gameObject.tag == "Interactable")
         {
             grounded = true;
             jumpsRemaining = maxJumps;

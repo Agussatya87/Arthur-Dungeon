@@ -8,6 +8,7 @@ public class TimerQuest : MonoBehaviour
 {
     public Slider timerSlider;
     bool isStop;
+    public GameObject panelResult;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,9 @@ public class TimerQuest : MonoBehaviour
             else
             {
                 isStop = true;
+
+                panelResult.SetActive(true);
+
                 Debug.Log("Stop");
             }
 
