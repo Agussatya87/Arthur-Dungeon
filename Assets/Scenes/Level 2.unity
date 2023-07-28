@@ -70759,10 +70759,10 @@ RectTransform:
   m_Father: {fileID: 665390887}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519.44, y: 470.87}
-  m_SizeDelta: {x: 881.11, y: 138.27}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 440.56, y: -69.130005}
+  m_SizeDelta: {x: 881.11, y: 138.27002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761392008
 MonoBehaviour:
@@ -71106,9 +71106,10 @@ GameObject:
   - component: {fileID: 892330575}
   - component: {fileID: 892330574}
   - component: {fileID: 892330573}
-  m_Layer: 9
+  - component: {fileID: 892330576}
+  m_Layer: 8
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71262,6 +71263,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 892330570}
   maxHealth: 100
+--- !u!114 &892330576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892330569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe22d5e5687e714c96cb7c4438613ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 0
+  range: 1
+  damage: 1
+  colliderDistance: 1.2
+  boxCollider: {fileID: 892330574}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &931777440
 GameObject:
   m_ObjectHideFlags: 0
@@ -88998,7 +89019,7 @@ MonoBehaviour:
   attackPoint: {fileID: 2073240009}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
   attackRange: 0.5
   attackDamage: 40
   attackRate: 2
@@ -89294,10 +89315,10 @@ RectTransform:
   m_Father: {fileID: 665390887}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -519.44, y: 470.87}
-  m_SizeDelta: {x: 881.11, y: 138.27}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 440.56, y: -69.130005}
+  m_SizeDelta: {x: 881.11, y: 138.27002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109541928
 MonoBehaviour:
